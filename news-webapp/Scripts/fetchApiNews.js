@@ -2,7 +2,7 @@ import axios from 'axios';
 import { db } from '../src/firebase.js'; // Adjust path if needed
 import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
 
-const API_KEY = 'pub_4c85267b7fe44d24b497731621c39961';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = 'https://newsdata.io/api/1/latest';
 
 const categories = ['World', 'Politics', 'Sports', 'Technology', 'Business', 'Health', 'Entertainment'];
